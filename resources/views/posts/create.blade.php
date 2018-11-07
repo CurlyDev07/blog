@@ -24,7 +24,13 @@
             </div>
             <div class="form-group">
                 <label for="body">Body</label>
+                
+                <textarea name="content" id="editor">
+                    &lt;p&gt;Here goes the initial content of the editor.&lt;/p&gt;
+                </textarea>
+
                 <textarea name="body" id="body" class="form-control {{ $errors->has('title') ? ' is-invalid' : '' }}" ></textarea>
+
                 @if ($errors->has('body'))
                     <span class="invalid-feedback">
                         <strong>{{ $errors->first('body') }}</strong>
